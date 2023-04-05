@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class DepositCalculator {
-    final int PLACES = 2;
-    final double YEAR_RATE = 0.06;
+    final int PLACES = 2; // здорово что ты вынесла переменные в класс, я не догадалась:D
+    final double YEAR_RATE = 0.06; // после инициализации переменных вроде нужен пробел)
     double calculateComplexPercent(double amount, int period) {
         return roundPercent(amount * Math.pow((1 + YEAR_RATE / 12), 12 * period));
     }
@@ -12,7 +12,7 @@ public class DepositCalculator {
     }
 
     double roundPercent(double value) {
-        double ScaLe = Math.pow(10, PLACES);
+        double ScaLe = Math.pow(10, PLACES); // Scale - это имя переменной, лучше написать с маленькой буквы
         return Math.round(value * ScaLe) / ScaLe;
     }
 
@@ -38,5 +38,5 @@ public class DepositCalculator {
 
     public static void main(String[] args) {
         new DepositCalculator().workWithInput();
-    }
+    }  // здесь было в одну строку все написано, начала писать комментарий, произошли чудеса и все поправилось))
 }
